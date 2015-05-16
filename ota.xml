@@ -14,7 +14,7 @@
     <!-- HTTP link will open a web page -->
     <!-- Direct Link overrides HTTP link -->
   <DirectUrl><![CDATA[https://basketbuild.com/filedl/devs?dev=akhil1999&dl=akhil1999/OwnROM/OwnKernel-2.5-sprout.zip]]></DirectUrl>
-  <HttpUrl><![CDATA[https://www.androidfilehost.com/user/?w=settings-dev-files&flid=27421]]></HttpUrl>
+  <HttpUrl nil="true"/>
   <!-- What version are you issuing? -->
   <Android>5.1.1</Android>
   <!-- Providing File Checking for direct downloads. You SHOULD offer this for your users whether using HTTP or Direct -->
@@ -28,7 +28,7 @@
   <Developer>akhilnarang</Developer>
   <!-- Your ROM or Developer Website. Can be a personal site or your XDA/forum thread -->
   <!-- OPTIONAL: Enter <Website nil="true" /> to hide this -->
-  <WebsiteURL>http://resurrectionremix.com</WebsiteURL>
+  <WebsiteURL>http://www.resurrectionremix.com</WebsiteURL>
   <!-- Your Donate URL -->
   <!-- OPTIONAL: Enter <DonateURL nil="true" /> to hide this -->
   <DonateURL nil="true" />
