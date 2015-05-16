@@ -25,7 +25,7 @@
   <FileSize type="integer">250190233</FileSize>
   <!-- Developer or Team name. You can put anything here, even a couple of names -->
   <!-- OPTIONAL: Enter <Developer nil="true" /> to hide this -->
-  <Developer>akhilnarang\nwestcrip\nvarunchitre15</Developer>
+  <Developer>akhilnarang</Developer>
   <!-- Your ROM or Developer Website. Can be a personal site or your XDA/forum thread -->
   <!-- OPTIONAL: Enter <Website nil="true" /> to hide this -->
   <WebsiteURL>resurrectionremix.com</WebsiteURL>
@@ -34,7 +34,7 @@
   <DonateURL nil="true" />
   <!-- Put the changelog here... Use Markdown to format it -->
   <!-- Again, surround special characters with the CDATA tags or your XML will NOT parse -->
-  <Changelog>### Changelog 5.4.5
+  <Changelog>### Changelog Resurrection Remix 5.4.5(sprout specific)
 * Added OTA
 * Reduced minimum brightness
 * Default DPI 200
