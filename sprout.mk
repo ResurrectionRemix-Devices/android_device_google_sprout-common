@@ -138,7 +138,8 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_PACKAGES += Torch
+PRODUCT_PACKAGES += Torch \
+		    OTAUpdates
 
 # call the proprietary setup
 $(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
