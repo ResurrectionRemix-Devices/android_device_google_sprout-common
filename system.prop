@@ -25,7 +25,7 @@ mediatek.wlan.ctia=0
 #
 wifi.tethering.interface=ap0
 #
-ro.sf.lcd_density=240
+ro.sf.lcd_density=200
 ro.opengles.version=131072
 
 wifi.direct.interface=p2p0
@@ -81,3 +81,7 @@ ril.radiooff.poweroffMD=0
 import /oem/oem.prop ro.product.name
 import /oem/oem.prop ro.product.manufacturer
 import /oem/oem.prop ro.product.model
+
+ro.ota.romname=RR
+ro.ota.version=544
+ro.ota.manifest=https://raw.githubusercontent.com/ResurrectionRemix-Devices/android_device_google_sprout-common/lollipop5.1/ota.xml
