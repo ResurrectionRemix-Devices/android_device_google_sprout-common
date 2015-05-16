@@ -84,4 +84,5 @@ import /oem/oem.prop ro.product.model
 
 ro.ota.romname=RR
 ro.ota.version=544
-ro.ota.manifest=https://raw.githubusercontent.com/ResurrectionRemix-Devices/android_device_google_sprout-common/lollipop5.1/ota.xml
+#ro.ota.manifest=https://raw.githubusercontent.com/ResurrectionRemix-Devices/android_device_google_sprout-common/lollipop5.1/ota.xml
+ro.ota.manifest=https://goo.gl/vQ9QhK
