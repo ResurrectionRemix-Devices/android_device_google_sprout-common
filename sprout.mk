@@ -21,7 +21,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
+    $(LOCAL_PATH)/configs/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:system/etc/permissions/android.hardware.faketouch.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     $(LOCAL_PATH)/configs/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
@@ -51,7 +51,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/rootdir/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/rootdir/system/etc/audio_policy.conf:system/etc/audio_policy.conf \
-    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml
@@ -75,13 +74,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
     $(LOCAL_PATH)/rootdir/root/init.sprout_common.rc:root/init.sprout_common.rc \
     $(LOCAL_PATH)/rootdir/root/sbin/multi_init:root/sbin/multi_init \
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/root/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout \
     $(LOCAL_PATH)/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
     $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc
 
@@ -126,10 +123,16 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images \
+    libnl_2 \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
     setup_fs \
     e2fsck \
 
-# Delegation for OEM customization
+# Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.name \
     ro.product.manufacturer \
@@ -137,8 +140,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 	
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-
-PRODUCT_PACKAGES += Torch
 
 # call the proprietary setup
 $(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
