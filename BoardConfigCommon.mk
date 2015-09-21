@@ -112,7 +112,7 @@ BOARD_SEPOLICY_UNION += \
 
 TARGET_TC_ROM := 4.9-cortex-a7
 
-TARGET_TC_KERNEL := 4.9-cortex-a7
+TARGET_TC_KERNEL := 5.2-cortex-a7
 
 RROPTI := true
 
