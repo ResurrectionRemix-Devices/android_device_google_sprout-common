@@ -141,5 +141,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+PRODUCT_COPY_FILES := $(LOCAL_PATH)/QuickBoot.apk:/system/app/QuickBoot/QuickBoot.apk
+
 # call the proprietary setup
 $(call inherit-product, vendor/google/sprout/sprout-vendor.mk)
