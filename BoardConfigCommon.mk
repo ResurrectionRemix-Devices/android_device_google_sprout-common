@@ -22,7 +22,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # kernel stuff
 TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
-TARGET_KERNEL_CONFIG := sprout_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
@@ -112,7 +112,7 @@ BOARD_SEPOLICY_UNION += \
 
 TARGET_TC_ROM := 4.9-cortex-a7
 
-TARGET_TC_KERNEL := 5.2-cortex-a7
+TARGET_TC_KERNEL := 4.9-cortex-a7
 
 RROPTI := true
 
